@@ -25,7 +25,13 @@
         <div class="date_information">
             <a href="#" id="date">Сегодня</a>
             <div class="list">
-                <input type="button" class="task" value="Добавить дело"></button>
+                <input id="newTask" type="text" class="tList" placeholder="Что нужно сделать?">
+                    <ul id="taskList">
+
+                    </ul>
+                <div class="wrap">
+                    <button type="button" class="task" onclick="addTask()">Добавить</button>
+                </div>
             </div>
         </div>
     </div>
