@@ -8,11 +8,21 @@ function getCurrentDate() {
     document.getElementById("date").innerHTML = currDay + " " + currMonth + " " + currYear;
 }
 getCurrentDate();
-function addTask(){
+
+function addTask() {
     let task = document.getElementById("newTask").value;
-    let liTask = document.createElement('li');
-    liTask.innerHTML = task;
-    document.getElementById("taskList").append(liTask);
-    document.getElementById("newTask").value = '';
+    if (task) {
+        let liTask = document.createElement('li');
+        liTask.innerHTML = task;
+        document.getElementById("taskList").append(liTask);
+        document.getElementById("newTask").value = '';
+    }
 }
 // addTask();
+
+const elem = document.addEventListener('click', endTask, false);
+
+function endTask() {
+    let cont = window.getComputedStyle(elem, ':before').content;
+    console.log(typeof(cont));
+}
