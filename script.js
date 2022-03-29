@@ -17,12 +17,28 @@ function addTask() {
         document.getElementById("taskList").append(liTask);
         document.getElementById("newTask").value = '';
     }
+    endTask();
 }
-// addTask();
 
-const elem = document.addEventListener('click', endTask, false);
+function endTask(){
+    let list = document.getElementById("taskList");
+    let tasks = list.childNodes;
+    addEventListenerList(tasks, 'click', function(e){
+        let chTask = e.target.style;
+        if (chTask.textDecoration == 'none'){
+            chTask.textDecoration = 'line-through';
+            chTask.color = 'rgb(114, 129, 55)';
+        }
+        else{
+            chTask.textDecoration = 'none';
+            chTask.color = '#D29D25';
+        }
+        // console.log(tasks);
+    })
+  }
 
-function endTask() {
-    let cont = window.getComputedStyle(elem, ':before').content;
-    console.log(typeof(cont));
+function addEventListenerList(list, event, func){
+    for (let i = 0, len = list.length; i < len; i++){
+        list[i].addEventListener(event, func, false);
+    }
 }
