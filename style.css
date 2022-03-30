@@ -29,7 +29,6 @@
 
 .header #date {
     padding: 7px;
-    /* justify-content: space-between; */
     font-size: 25px;
     font-style: italic;
     letter-spacing: 3px;
@@ -96,24 +95,8 @@
     border: 3px solid #fff;
     border-radius: 50px;
     resize: both;
-    /* overflow: auto; */
     margin: 15px auto;
-    /* display: flex;
-        justify-content: left;
-        align-items: flex-start; */
 }
-
-
-/*     
-    .task {
-        margin-top: 25px;
-        margin-left: 35px;
-        color: rgb(168, 19, 19);
-        background: url("../icon/plus4.png");
-        background-repeat: round;
-        width: 45px;
-        height: 45px;   
-    } */
 
 .wrap {
     width: 100%;
@@ -179,7 +162,6 @@
     border: 6px solid #e4fab1;
     position: absolute;
     z-index: -1;
-    /* top: 50%; */
     left: 50%;
     transform: translate(-50%, -50%);
     animation: ring 1.5s infinite;
@@ -197,6 +179,7 @@
         height: 30px;
         opacity: 1;
     }
+
     100% {
         width: 300px;
         height: 300px;
@@ -204,10 +187,9 @@
     }
 }
 
+/*input*/
+
 .tList {
-    /* display: flex;
-          justify-content: flex-start;
-          align-items: flex-start; */
     width: 80%;
     margin-top: 25px;
     border-width: 3px;
@@ -233,7 +215,6 @@
     font-size: 18px;
     overflow-y: auto;
     scrollbar-width: thin;
-    /* scrollbar-color: rgb(203, 230, 84); */
 }
 
 #taskList::-webkit-scrollbar {
@@ -246,7 +227,6 @@
     color: #D29D25;
     font-variant: small-caps;
     font-weight: bold;
-    /* cursor: pointer; */
 }
 
 #taskList li:before {
@@ -278,4 +258,16 @@
 
 #taskList li:last-child:after {
     content: none;
+}
+
+.list #tomorrow {
+    display: inline-block;
+    position: relative;
+    width: 350px;
+    height: 500px;
+    background: linear-gradient(0.25turn, #d0dd57, #e3f193, #eba75f);
+    border: 3px solid #fff;
+    border-radius: 50px;
+    resize: both;
+    margin: 15px auto;
 }
