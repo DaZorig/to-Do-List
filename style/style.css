@@ -260,8 +260,7 @@
     content: none;
 }
 
-.list #tomorrow {
-    display: inline-block;
+.tomorrow {
     position: relative;
     width: 350px;
     height: 500px;
@@ -270,4 +269,5 @@
     border-radius: 50px;
     resize: both;
     margin: 15px auto;
+    /* float: inline-end; */
 }
